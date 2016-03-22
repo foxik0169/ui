@@ -1,0 +1,49 @@
+<font name="default" file="pcf.ttf"/>
+<app bg="0xE74C3CFF"/>
+
+<style element="button">
+	<attribute public="true" name="text" default="Button"/>
+	<attribute public="true" name="text-size" default="24"/>
+	<attribute name="color1" default="0xE74C3CFF"/>
+	<attribute name="color2" default="0x2C3E50FF"/>
+	<attribute name="border-width" default="2"/>
+	
+	<visual>
+		<rounded-rect fill-color="@color1" radius="0" border-color="@color2" border-width="0"/>
+		<text value="@text" size="18" color="@color2"/>
+	</visual>
+	
+	<animation from="normal" to="hover">
+		<transition type="linear" attribute="color1" time="0.1" />
+		<transition type="linear" attribute="color2" time="0.4" />
+		<transition type="linear" attribute="text-size" time="0.2" />
+	</animation>
+	
+	<animation from="hover" to="normal">
+		<transition type="linear" attribute="color1" time="0.15" />
+		<transition type="linear" attribute="color2" time="0.2" />
+		<transition type="linear" attribute="text-size" time="0.1" />
+	</animation>
+	
+	<animation from="hover" to="pressed">
+		<transition type="linear" attribute="color1" time="0.05" />
+	</animation>
+	
+	<normal>
+		<!-- ("should be") filled with default values on load time -->
+		<!-- existing properties will be kept -->
+	</normal>
+	<hover>
+		<color1 value="0x2C3E50FF"/>
+		<color2 value="0xE74C3CFF"/>
+	</hover>
+	<pressed>
+		<bg-color value="0x2C3E50FF"/>
+	</pressed>
+	<disabled>
+	</disabled>
+</style>
+
+<style name="ruzovy">
+	
+</style>

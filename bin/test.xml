@@ -1,0 +1,47 @@
+<boxlayout margin="4" id="test">
+	<boxlayout orientation="horizontal">
+		<button/>
+		<button text="Testing :)"/>
+		<button style="ruzovy"/>
+		<button/>
+		<button/>
+		<button/>
+		<button/>
+		<button/>
+		<button/>
+		<button/>
+		
+		<boxlayout>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			<button text="Testing :)"/>
+			
+			
+		</boxlayout>
+		<button/>
+	</boxlayout>
+	<boxlayout orientation="horizontal">
+		<button/>
+		<boxlayout>
+			<button/>
+			<button/>
+			<button/>
+			<button/>
+			<button/>
+			<button/>
+			<button/>
+			<button/>
+		</boxlayout>
+	</boxlayout>
+	<button/>
+	<button/>
+</boxlayout>

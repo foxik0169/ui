@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define NANOVG_GLEW
+
 #ifdef NANOVG_GLEW
 #  include <GL/glew.h>
 #endif
@@ -32,20 +34,22 @@ static void do_draw(GLFWwindow* window, NVGcontext *vg, int font)
 
 	nvgBeginFrame(vg, winWidth, winHeight, pxRatio);
 
+	nvgSave(vg);
+
+	nvgCreateFont(vg, "default", "pcf.ttf");
+
 	nvgBeginPath(vg);
 	nvgRoundedRect(vg, mx, my, 30, 30, 5);
 	nvgFillColor(vg, nvgRGBA(255, 255, 255, 100));
 	nvgFill(vg);
 
-	nvgSave(vg);
-
 	nvgBeginPath(vg);
 	nvgFontSize(vg, 18.0f);
-	nvgFontFaceId(vg, font);
+	nvgFontFace(vg, "default");
 	nvgTextAlign(vg, NVG_ALIGN_LEFT | NVG_ALIGN_TOP);
 
 	nvgText(vg, 20, 20, "UI App", nullptr);
-	nvgFillColor(vg, nvgRGBA(235, 220, 180, 255));
+	nvgFillColor(vg, nvgRGBA(0, 0, 0, 255));
 	nvgFill(vg);
 
 	nvgRestore(vg);
@@ -121,7 +125,7 @@ int main(int argc, char* argv[])
 
 	glfwSetTime(0);
 
-	font = nvgCreateFont(vg, "default", "pcf.ttf");
+	font = 2;
 	if (font == -1)
 	{
 		printf("Failed to load font!\n");
